@@ -1,0 +1,17 @@
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\WebServiceVM.Infrastructure.csproj.AssemblyReference.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\WebServiceVM.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\WebServiceVM.Infrastructure.AssemblyInfoInputs.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\WebServiceVM.Infrastructure.AssemblyInfo.cs
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\WebServiceVM.Infrastructure.csproj.CoreCompileInputs.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\bin\Debug\net6.0\WebServiceVM.Infrastructure.deps.json
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\bin\Debug\net6.0\WebServiceVM.Infrastructure.runtimeconfig.json
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\bin\Debug\net6.0\WebServiceVM.Infrastructure.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\bin\Debug\net6.0\WebServiceVM.Infrastructure.pdb
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\bin\Debug\net6.0\WebServiceVM.Core.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\bin\Debug\net6.0\WebServiceVM.Core.pdb
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\WebServiceVM.Infrastructure.csproj.CopyComplete
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\WebServiceVM.Infrastructure.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\refint\WebServiceVM.Infrastructure.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\WebServiceVM.Infrastructure.pdb
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\WebServiceVM.Infrastructure.genruntimeconfig.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Infrastructure\obj\Debug\net6.0\ref\WebServiceVM.Infrastructure.dll

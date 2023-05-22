@@ -1,0 +1,12 @@
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\bin\Debug\net6.0\WebServiceVM.Core.deps.json
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\bin\Debug\net6.0\WebServiceVM.Core.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\bin\Debug\net6.0\WebServiceVM.Core.pdb
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\obj\Debug\net6.0\WebServiceVM.Core.csproj.AssemblyReference.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\obj\Debug\net6.0\WebServiceVM.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\obj\Debug\net6.0\WebServiceVM.Core.AssemblyInfoInputs.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\obj\Debug\net6.0\WebServiceVM.Core.AssemblyInfo.cs
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\obj\Debug\net6.0\WebServiceVM.Core.csproj.CoreCompileInputs.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\obj\Debug\net6.0\WebServiceVM.Core.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\obj\Debug\net6.0\refint\WebServiceVM.Core.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\obj\Debug\net6.0\WebServiceVM.Core.pdb
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.Core\obj\Debug\net6.0\ref\WebServiceVM.Core.dll

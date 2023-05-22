@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ZzWgjxZh88Ou+SOtl/rh3UN8eWT6k7kZFZrlRcvXRyU=",
+  "Source": "WebServiceVM.WebAPI",
+  "BasePath": "_content/WebServiceVM.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
