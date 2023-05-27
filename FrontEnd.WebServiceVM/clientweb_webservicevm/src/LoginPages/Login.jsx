@@ -8,16 +8,18 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import {ThemeProvider, createTheme} from "@mui/material/styles";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { useState, forwardRef } from "react";
+import React, {useState, forwardRef, useEffect} from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Stack from "@mui/material/Stack";
 import MuiAlert from "@mui/material/Alert";
 import Slide from "@mui/material/Slide";
-import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
+import {useNavigate} from "react-router-dom";
+import {useForm} from "react-hook-form";
+import {GlobaVariable} from "../GlobaVariable";
+import axios from 'axios';
 
 const Alert = forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -52,12 +54,34 @@ export default function Login() {
     const vertical = "top";
     const horizontal = "right";
     const navigate = useNavigate();
+    // const [firstname, setFirstName] = useState('');
+    // const [lastname, setLastName] = useState('');
+    const [password, setPassword] = useState('');
+    const [email, setMail] = useState('');
+
+//------------------------------------------------------------------------------//
+
+    const [loginStatus, setLoginStatus] = useState("");
+    const loginUser = async (e) => {
+        e.preventDefault();
+        await axios.post(GlobaVariable.API_URL + "login", null, {
+            params: {
+                email, password
+            }
+        }).then((response) => {
+            navigate("/acceuil");
+        }).catch((err) => {
+            console.log(err);
+            navigate("/register");
+        });
+    }
+//------------------------------------------------------------------------------//
 
     const {
         register,
         handleSubmit,
         watch,
-        formState: { errors },
+        formState: {errors},
     } = useForm();
 
     const onSubmit = async (data) => {
@@ -73,7 +97,7 @@ export default function Login() {
     };
 
     function TransitionLeft(props) {
-        return <Slide {...props} direction="left" />;
+        return <Slide {...props} direction="left"/>;
     }
 
     return (
@@ -83,11 +107,10 @@ export default function Login() {
                 autoHideDuration={3000}
                 onClose={handleClose}
                 TransitionComponent={TransitionLeft}
-                anchorOrigin={{ vertical, horizontal }}
+                anchorOrigin={{vertical, horizontal}}
             >
-                <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
-                    You have successfully logged in!
-                </Alert>
+                <Alert onClose={handleClose} severity="success" sx={{width: "100%"}}>
+                    Vous vous êtes connecté avec succès! </Alert>
             </Snackbar>
             <div
                 style={{
@@ -123,62 +146,71 @@ export default function Login() {
                             >
                                 <ThemeProvider theme={darkTheme}>
                                     <Container>
-                                        <Box height={35} />
+                                        <Box height={35}/>
                                         <Box sx={center}>
                                             <Avatar
-                                                sx={{ ml: "35px", mb: "4px", bgcolor: "#ffffff" }}
+                                                sx={{ml: "35px", mb: "4px", bgcolor: "#ffffff"}}
                                             >
-                                                <LockOutlinedIcon />
+                                                <LockOutlinedIcon/>
                                             </Avatar>
                                             <Typography component="h1" variant="h4">
-                                                Sign In
+                                                Connexion
                                             </Typography>
                                         </Box>
-                                        <Box sx={{ mt: 2 }} />
-                                        <form onSubmit={handleSubmit(onSubmit)}>
+                                        <Box sx={{mt: 2}}/>
+                                        <form onSubmit={loginUser}>
+
                                             <Grid container spacing={1}>
-                                                <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
+                                                <Grid item xs={12} sx={{ml: "3em", mr: "3em"}}>
                                                     <TextField
-                                                        {...register("email", { required: true })}
                                                         fullWidth
                                                         id="email"
-                                                        label="Username"
+                                                        label="Email Utilisateur"
                                                         name="email"
                                                         autoComplete="email"
+                                                        {...register("email")}
+                                                        aria-invalid={errors.email ? "true" : "false"}
+                                                        onChange={(e) => {
+                                                            setMail(e.target.value)
+                                                        }}
                                                     />
                                                     {errors.email && (
                                                         <span
-                                                            style={{ color: "#f7d643", fontSize: "12px" }}
+                                                            style={{color: "#f7d643", fontSize: "12px"}}
                                                         >
-                                                            This field is required
+                                                            Ce champ est obligatoire!
                                                         </span>
                                                     )}
                                                 </Grid>
-                                                <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
+                                                <Grid item xs={12} sx={{ml: "3em", mr: "3em"}}>
                                                     <TextField
                                                         fullWidth
-                                                        {...register("password", { required: true })}
+                                                        {...register("password", {required: true})}
                                                         name="password"
-                                                        label="Password"
+                                                        label="Mot de Passe"
                                                         type="password"
                                                         id="password"
                                                         autoComplete="new-password"
+                                                        onChange={(e) => {
+                                                            setPassword(e.target.value)
+                                                        }}
                                                     />
+                                                    {/*// value={password} onChange={handlePassword}*/}
                                                     {errors.password && (
                                                         <span
-                                                            style={{ color: "#f7d643", fontSize: "12px" }}
+                                                            style={{color: "#f7d643", fontSize: "12px"}}
                                                         >
-                                                            This field is required
+                                                            Ce champ est obligatoire!
                                                         </span>
                                                     )}
                                                 </Grid>
-                                                <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
+                                                <Grid item xs={12} sx={{ml: "3em", mr: "3em"}}>
                                                     <Stack direction="row" spacing={2}>
                                                         <FormControlLabel
-                                                            sx={{ width: "60%" }}
+                                                            sx={{width: "60%"}}
                                                             onClick={() => setRemember(!remember)}
-                                                            control={<Checkbox checked={remember} />}
-                                                            label="Remember me"
+                                                            control={<Checkbox checked={remember}/>}
+                                                            label="Souvenez-moi !!"
                                                         />
                                                         <Typography
                                                             variant="body1"
@@ -186,13 +218,13 @@ export default function Login() {
                                                             onClick={() => {
                                                                 navigate("/reset-password");
                                                             }}
-                                                            style={{ marginTop: "10px", cursor: "pointer" }}
+                                                            style={{marginTop: "10px", cursor: "pointer"}}
                                                         >
-                                                            Forgot password?
+                                                            Mot de Passe oublié?
                                                         </Typography>
                                                     </Stack>
                                                 </Grid>
-                                                <Grid item xs={12} sx={{ ml: "5em", mr: "5em" }}>
+                                                <Grid item xs={12} sx={{ml: "5em", mr: "5em"}}>
                                                     <Button
                                                         type="submit"
                                                         variant="contained"
@@ -206,18 +238,19 @@ export default function Login() {
                                                             minWidth: "170px",
                                                             backgroundColor: "#FF9A01",
                                                         }}
+
                                                     >
-                                                        Sign in
+                                                        Se Connecter
                                                     </Button>
                                                 </Grid>
-                                                <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
+                                                <Grid item xs={12} sx={{ml: "3em", mr: "3em"}}>
                                                     <Stack direction="row" spacing={2}>
                                                         <Typography
                                                             variant="body1"
                                                             component="span"
-                                                            style={{ marginTop: "10px" }}
+                                                            style={{marginTop: "10px"}}
                                                         >
-                                                            Not registered yet?{" "}
+                                                            Vous n'êtes pas inscrit ?{" "}
                                                             <span
                                                                 style={{
                                                                     color: "#beb4fb",
@@ -227,7 +260,7 @@ export default function Login() {
                                                                     navigate("/register");
                                                                 }}
                                                             >
-                                                                Create an Account
+                                                                Créer nouveau compte
                                                             </span>
                                                         </Typography>
                                                     </Stack>
@@ -244,3 +277,70 @@ export default function Login() {
         </>
     );
 }
+//const [mobile, setMobile] = useState('');
+// var userEmail = document.getElementById("email");
+// var userPassword = document.getElementById("password");
+// const handleEmail = (event) => {
+//     setMail(event.target.value);
+//     console.log("email=" + email);
+// }
+// const handlePassword = (event) => {
+//     setPassword(event.target.value);
+//     console.log("Password=" + password);
+// }
+// const handleRegistre = () => {
+//     // if (register){
+//     setRegistre(!register);
+//     // }
+// }
+//Crud Api----------------------------------------------------------------------//
+
+//     const [posts, setPosts] = useState([]);
+//     const [resStatus, setResStatus] = useState(0);
+//     const [registre, setRegistre] = useState(true);
+// //--------------------Post Methode------------------------------//
+//     const handlePostMethodeClient = (e) => {
+//         e.preventDefault();
+//         axios.post(GlobaVariable.API_URL + "WebClientController"
+//             , null, {
+//                 params: {firstname, lastname, password, email, mobile}
+//             })
+//             .then((response) => {
+//                 setResStatus(response.status);
+//                 console.log(response.status + "all hamd lileh");
+//             }).catch((err) => {
+//             console.log(err)
+//         });
+//     }
+//---------------------------------------------------------------//
+//     function getData() {
+//         axios.get(GlobaVariable.API_URL + "WebClientController")
+//             // ,{
+//             //   method: 'GET',
+//             //   mode: 'no-cors',
+//             //  headers: {
+//             //    'Access-Control-Allow-Origin': '*',
+//             //   'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+//             // }
+//             // withCredentials: true,
+//             // credentials: 'same-origin',
+//             // })
+//             .then((response) => {
+//                 setPosts(response.data);
+//                 console.log(posts);
+//             }).catch((err) => {
+//             console.log(err)
+//         });
+//     }
+//-----------------------------------
+
+//import * as yup from "yup";
+// const schema = yup
+//     .object({
+//
+//         email: yup.string().email().required(),
+//         password: yup.string().min(3).required(),
+//     })
+//     .required();
+//-----------------------------------
+//-----------------------------------

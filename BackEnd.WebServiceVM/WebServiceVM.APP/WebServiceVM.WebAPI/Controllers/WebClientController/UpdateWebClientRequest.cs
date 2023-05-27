@@ -7,5 +7,6 @@
         public string Password { get; set; }
         public string Email { get; set; }
         public int Mobile { get; set; }
+        public string Genre { get; set; }
     }
 }

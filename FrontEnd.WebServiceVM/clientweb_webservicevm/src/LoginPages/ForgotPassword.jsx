@@ -11,7 +11,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { useState, forwardRef } from "react";
+import React, { useState, forwardRef } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Stack from "@mui/material/Stack";
 import MuiAlert from "@mui/material/Alert";
@@ -130,7 +130,7 @@ export default function ForgotPassword() {
                                                 <LockOutlinedIcon />
                                             </Avatar>
                                             <Typography component="h1" variant="h4">
-                                                Reset Password
+                                                Reset Mot de Passe
                                             </Typography>
                                         </Box>
                                         <Box sx={{ mt: 2 }} />
@@ -149,7 +149,7 @@ export default function ForgotPassword() {
                                                         <span
                                                             style={{ color: "#f7d643", fontSize: "12px" }}
                                                         >
-                                                            This field is required
+                                                            Ce champ est obligatoire
                                                         </span>
                                                     )}
                                                 </Grid>
@@ -168,7 +168,7 @@ export default function ForgotPassword() {
                                                             backgroundColor: "#FF9A01",
                                                         }}
                                                     >
-                                                        Send Reset Link
+                                                        Envoyer Lien de Reset
                                                     </Button>
                                                 </Grid>
                                                 <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
@@ -178,7 +178,7 @@ export default function ForgotPassword() {
                                                             component="span"
                                                             style={{ marginTop: "10px" }}
                                                         >
-                                                            Login to your Account.
+                                                            Connectez-vous à votre compte.
                                                             <span
                                                                 style={{ color: "#beb4fb", cursor: "pointer" }}
                                                                 onClick={() => {
@@ -186,7 +186,7 @@ export default function ForgotPassword() {
                                                                 }}
                                                             >
                                                                 {" "}
-                                                                Sign In
+                                                                Se Connecter
                                                             </span>
                                                         </Typography>
                                                     </Stack>

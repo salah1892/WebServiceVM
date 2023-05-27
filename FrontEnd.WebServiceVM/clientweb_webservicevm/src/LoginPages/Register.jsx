@@ -6,20 +6,22 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { useState, forwardRef } from "react";
+import {ThemeProvider, createTheme} from "@mui/material/styles";
+import React, {useState, forwardRef} from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Stack from "@mui/material/Stack";
 import MuiAlert from "@mui/material/Alert";
 import Slide from "@mui/material/Slide";
-import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+import {useNavigate} from "react-router-dom";
+import {useForm} from "react-hook-form";
+import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import {GlobaVariable} from '../GlobaVariable';
+import axios from "axios";
 
 const schema = yup
     .object({
@@ -63,18 +65,24 @@ export default function Register() {
     const vertical = "top";
     const horizontal = "right";
     const navigate = useNavigate();
+    const [firstname, setFirstName] = useState('');
+    const [lastname, setLastName] = useState('');
+    const [password, setPassword] = useState('');
+    const [secondPassword, setSecondPassword] = useState('');
+    const [email, setMail] = useState('');
+    const [mobile, setMobile] = useState('');
     const [gender, setGender] = useState("");
     const {
         register,
         handleSubmit,
         watch,
-        formState: { errors },
+        formState: {errors},
     } = useForm({
         resolver: yupResolver(schema),
     });
 
     const onSubmit = async (data) => {
-        Object.assign(data, { gender: gender });
+        Object.assign(data, {gender: gender});
         console.log(data);
     };
 
@@ -91,9 +99,28 @@ export default function Register() {
     };
 
     function TransitionLeft(props) {
-        return <Slide {...props} direction="left" />;
+        return <Slide {...props} direction="left"/>;
     }
 
+    //------------------------------------------------------------------------------//
+
+    const [loginStatus, setLoginStatus] = useState("");
+    const AddUser = async (e) => {
+        e.preventDefault();
+        await axios.post(GlobaVariable.API_URL + "WebClientController", null, {
+            params: {
+                firstname, lastname, password, email, mobile, gender
+            }
+        }).then((response) => {
+
+            navigate("/");
+
+        }).catch((err) => {
+            console.log(err);
+            navigate("/register");
+        });
+    }
+//------------------------------------------------------------------------------//
     return (
         <>
             <Snackbar
@@ -101,9 +128,9 @@ export default function Register() {
                 autoHideDuration={3000}
                 onClose={handleClose}
                 TransitionComponent={TransitionLeft}
-                anchorOrigin={{ vertical, horizontal }}
+                anchorOrigin={{vertical, horizontal}}
             >
-                <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
+                <Alert onClose={handleClose} severity="error" sx={{width: "100%"}}>
                     Failed! Enter correct username and password.
                 </Alert>
             </Snackbar>
@@ -125,7 +152,7 @@ export default function Register() {
                                     marginTop: "40px",
                                     marginLeft: "15px",
                                     marginRight: "15px",
-                                     height: "63vh",
+                                    height: "63vh",
                                     color: "#f5f5f5",
                                 }}
                             ></Box>
@@ -141,25 +168,49 @@ export default function Register() {
                             >
                                 <ThemeProvider theme={darkTheme}>
                                     <Container>
-                                        <Box height={25} />
+                                        <Box height={25}/>
                                         <Box sx={center}>
                                             <Typography component="h1" variant="h4">
-                                                Create Account
+                                                Créer un Compte
                                             </Typography>
                                         </Box>
-                                        <Box sx={{ mt: 2 }} />
-                                        <form onSubmit={handleSubmit(onSubmit)}>
+                                        <Box sx={{mt: 2}}/>
+                                        <form onSubmit={AddUser}>
                                             <Grid container spacing={1}>
-                                                <Grid item xs={12}>
+                                                <Grid item xs={6}>
                                                     <TextField
                                                         {...register("username")}
                                                         fullWidth
-                                                        label="Username"
+                                                        label="Nom"
                                                         size="small"
                                                         name="username"
+                                                        onChange={(e) => {
+                                                            setFirstName(e.target.value)
+                                                        }}
+
                                                     />
                                                     {errors.username && (
-                                                        <span style={{ color: "#f7d643", fontSize: "12px" }}>
+                                                        <span style={{color: "#f7d643", fontSize: "12px"}}>
+                                                            {errors.username?.message}
+                                                        </span>
+                                                    )}
+                                                </Grid>
+                                                {/*--------------------------------------*/}
+                                                <Grid item xs={6}>
+                                                    <TextField
+                                                        {...register("lastname")}
+                                                        fullWidth
+                                                        label="Prénom"
+                                                        size="small"
+                                                        name="lastname"
+                                                        onChange={(e) => {
+
+                                                            setLastName(e.target.value);
+                                                        }}
+
+                                                    />
+                                                    {errors.username && (
+                                                        <span style={{color: "#f7d643", fontSize: "12px"}}>
                                                             {errors.username?.message}
                                                         </span>
                                                     )}
@@ -174,9 +225,12 @@ export default function Register() {
                                                         size="small"
                                                         {...register("email")}
                                                         aria-invalid={errors.email ? "true" : "false"}
+                                                        onChange={(e) => {
+                                                            setMail(e.target.value)
+                                                        }}
                                                     />
                                                     {errors.email && (
-                                                        <span style={{ color: "#f7d643", fontSize: "12px" }}>
+                                                        <span style={{color: "#f7d643", fontSize: "12px"}}>
                                                             {errors.email?.message}
                                                         </span>
                                                     )}
@@ -186,14 +240,17 @@ export default function Register() {
                                                         {...register("password")}
                                                         fullWidth
                                                         name="password"
-                                                        label="Password"
+                                                        label="Mot de Passe"
                                                         type="password"
                                                         size="small"
                                                         id="password"
                                                         autoComplete="new-password"
+                                                        onChange={(e) => {
+                                                            setPassword(e.target.value)
+                                                        }}
                                                     />
                                                     {errors.password && (
-                                                        <span style={{ color: "#f7d643", fontSize: "12px" }}>
+                                                        <span style={{color: "#f7d643", fontSize: "12px"}}>
                                                             {errors.password?.message}
                                                         </span>
                                                     )}
@@ -203,14 +260,17 @@ export default function Register() {
                                                         fullWidth
                                                         {...register("confirmpassword")}
                                                         name="confirmpassword"
-                                                        label="Confirm Password"
+                                                        label="Confirmer Mot de Passe"
                                                         type="password"
                                                         size="small"
                                                         id="confirmpassword"
                                                         autoComplete="new-password"
+                                                        onChange={(e) => {
+                                                            setSecondPassword(e.target.value)
+                                                        }}
                                                     />
                                                     {errors.password && (
-                                                        <span style={{ color: "#f7d643", fontSize: "12px" }}>
+                                                        <span style={{color: "#f7d643", fontSize: "12px"}}>
                                                             {errors.confirmpassword?.message}
                                                         </span>
                                                     )}
@@ -220,12 +280,15 @@ export default function Register() {
                                                         {...register("mobile")}
                                                         fullWidth
                                                         name="mobile"
-                                                        label="Contact Number"
+                                                        label="N° Téléphone"
                                                         type="number"
                                                         size="small"
+                                                        onChange={(e) => {
+                                                            setMobile(e.target.value)
+                                                        }}
                                                     />
                                                     {errors.mobile && (
-                                                        <span style={{ color: "#f7d643", fontSize: "12px" }}>
+                                                        <span style={{color: "#f7d643", fontSize: "12px"}}>
                                                             {errors.mobile?.message}
                                                         </span>
                                                     )}
@@ -233,28 +296,31 @@ export default function Register() {
                                                 <Grid item xs={6}>
                                                     <FormControl fullWidth>
                                                         <InputLabel id="demo-simple-select-label">
-                                                            Gender
+                                                            Genre
                                                         </InputLabel>
                                                         <Select
                                                             labelId="demo-simple-select-label"
                                                             id="demo-simple-select"
                                                             value={gender}
-                                                            label="Gender"
+                                                            label="Genre"
                                                             size="small"
                                                             onChange={handleChange}
+
                                                         >
-                                                            <MenuItem value="male">Male</MenuItem>
-                                                            <MenuItem value="Female">Female</MenuItem>
-                                                            <MenuItem value="Other">Other</MenuItem>
+                                                            {/*onChange={handleChange}*/}
+                                                            {/*onChange={(e) => {setGender(e.target.value)}}*/}
+                                                            <MenuItem value="Homme" >Male</MenuItem>
+                                                            <MenuItem value="Femme" >Female</MenuItem>
+                                                            <MenuItem value="Autre">Other</MenuItem>
                                                         </Select>
                                                     </FormControl>
                                                     {errors.gender && (
-                                                        <span style={{ color: "#f7d643", fontSize: "12px" }}>
+                                                        <span style={{color: "#f7d643", fontSize: "12px"}}>
                                                             {errors.gender?.message}
                                                         </span>
                                                     )}
                                                 </Grid>
-                                                <Grid item xs={12} sx={{ ml: "5em", mr: "5em" }}>
+                                                <Grid item xs={12} sx={{ml: "5em", mr: "5em"}}>
                                                     <Button
                                                         type="submit"
                                                         variant="contained"
@@ -269,7 +335,7 @@ export default function Register() {
                                                             backgroundColor: "#FF9A01",
                                                         }}
                                                     >
-                                                        Register
+                                                        S'inscrire
                                                     </Button>
                                                 </Grid>
                                                 <Grid item xs={12}>
@@ -277,16 +343,16 @@ export default function Register() {
                                                         <Typography
                                                             variant="body1"
                                                             component="span"
-                                                            style={{ marginTop: "10px" }}
+                                                            style={{marginTop: "10px"}}
                                                         >
-                                                            Already have an Account?{" "}
+                                                            Avez-vous déjà un compte?{" "}
                                                             <span
-                                                                style={{ color: "#beb4fb", cursor: "pointer" }}
+                                                                style={{color: "#beb4fb", cursor: "pointer"}}
                                                                 onClick={() => {
                                                                     navigate("/");
                                                                 }}
                                                             >
-                                                                Sign In
+                                                                Se Connecter
                                                             </span>
                                                         </Typography>
                                                     </Stack>
