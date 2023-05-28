@@ -69,7 +69,7 @@ export default function Login() {
                 email, password
             }
         }).then((response) => {
-            navigate("/acceuil");
+            navigate("/");
         }).catch((err) => {
             console.log(err);
             navigate("/register");

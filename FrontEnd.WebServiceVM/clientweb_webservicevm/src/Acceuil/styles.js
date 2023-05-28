@@ -1,10 +1,17 @@
 // import { makeStyles } from "@mui/styles"
 //import { makeStyles } from '@emotion/styled';
-import { styled } from "@mui/material";
+import { styled,withStyles } from "@mui/material";
 const useStyles = styled((theme) => ({
     container: {
         backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(8, 0, 6)
+        padding: theme.spacing(8, 0, 6),
+        display: 'flex',
+        flexDirection:'column',
+        minHeight: '100vh',
+        overflow: 'hidden',
+    }, content: {
+        flexGrow: 1,
+        padding: theme.spacing(2),
     },
     icon: {
         marginRight: '20px',
@@ -27,12 +34,20 @@ const useStyles = styled((theme) => ({
     cardContent: {
         flexGrow: 1,
     }, footer: {
-        backgroundColor: theme.palette.background.paper,
-        padding:'50px 0'
+       
+        padding:'50px 0',
+        color:' #fc86aa',
     },
     menu1 :{
     marginBottom: '40px',
     marginTop: '20px',
-}
+    },row: {
+        '&:nth-of-type(odd)': {
+            backgroundColor: theme.palette.background.default,
+        },
+    },titleClient:{
+        background: "#00022E",
+        color:'#fc86aa',
+    }
 }))
 export default useStyles;

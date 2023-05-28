@@ -1,4 +1,8 @@
+//import { height } from '@mui/system';
 import React from 'react';
+import Clients from './Clients';
+import Dashboard from './Dashboard'
+// import { GlobalStyles } from "./Acceuil/GlobalStyles"
 const Home = () => {
     return (
         <>
@@ -8,17 +12,6 @@ const Home = () => {
         </>
     );
 };
-
-const Dashboard = () => {
-    return (
-        <>
-            <h1 className="header"> DASHBOARD PAGE</h1>
-            <h3>Welcome User</h3>
-            <p>Lorem ipsum dolor sit amet...</p>
-        </>
-    );
-};
-
 const Transactions = () => {
     return (
         <>
@@ -29,18 +22,29 @@ const Transactions = () => {
     );
 };
 function MainSection({ currentSection }) {
+    
     let sectionContent = null;
 
     if (currentSection === 'Home') {
-        sectionContent = <Home/>;
+        sectionContent = <Home />;
     } else if (currentSection === 'Dashboard') {
-        sectionContent = <Dashboard/>;
+        sectionContent = <Dashboard />;
     } else if (currentSection === 'Transactions') {
-        sectionContent = <Transactions/>;
+        sectionContent = <Transactions />;
+    } else if (currentSection === 'Clients') {
+        sectionContent = <Clients />;
     }
-
+    // style={{flexGrow: 1,
+    //     width: 1000,
+    //         height: '100vh',
+    //             overflow: 'auto'}}
     return (
-        <div >
+        <div className='MainSection' style={{
+            flexGrow: 1,
+            width: 1000,
+            height: '100vh',
+            overflow: 'auto'
+        }}>
             {sectionContent}
         </div>
     );
