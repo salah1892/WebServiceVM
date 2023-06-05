@@ -1,0 +1,8 @@
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WPF_SignalR_Client\obj\Debug\net6.0-windows\WPF_SignalR_Client.csproj.AssemblyReference.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WPF_SignalR_Client\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WPF_SignalR_Client\obj\Debug\net6.0-windows\View\OtherView.g.cs
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WPF_SignalR_Client\obj\Debug\net6.0-windows\View\PayementView.g.cs
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WPF_SignalR_Client\obj\Debug\net6.0-windows\App.g.cs
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WPF_SignalR_Client\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WPF_SignalR_Client\obj\Debug\net6.0-windows\WPF_SignalR_Client_MarkupCompile.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WPF_SignalR_Client\obj\Debug\net6.0-windows\WPF_SignalR_Client_MarkupCompile.lref

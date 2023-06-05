@@ -1,0 +1,22 @@
+﻿<Application x:Class="WPFSignalRClient.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPFSignalRClient"
+             xmlns:payementview="clr-namespace:WPFSignalRClient.View"
+             xmlns:otherview="clr-namespace:WPFSignalRClient.View"
+             xmlns:viewmodel="clr-namespace:WPFSignalRClient.ViewModel"
+             xmlns:othervm="clr-namespace:WPFSignalRClient.ViewModel" 
+             xmlns:otherview1="clr-namespace:WPFSignalRClient.View">
+             <!--StartupUri="MainWindow.xaml"-->
+    <!--View.PayementView-->
+    <!--StartupUri="MainWindow.xaml"-->
+    <Application.Resources>
+        <!-- ______________________ View-ViewModel ______________________ -->
+        <DataTemplate DataType="{x:Type viewmodel:PayementViewModel}">
+            <payementview:PayementView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type othervm:OtherViewModel}">
+            <otherview1:OtherView />
+        </DataTemplate>
+    </Application.Resources>
+</Application>

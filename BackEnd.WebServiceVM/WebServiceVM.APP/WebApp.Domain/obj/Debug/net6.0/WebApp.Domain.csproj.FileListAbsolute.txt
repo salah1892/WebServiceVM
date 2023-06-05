@@ -1,0 +1,12 @@
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\bin\Debug\net6.0\WebApp.Domain.deps.json
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\bin\Debug\net6.0\WebApp.Domain.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\bin\Debug\net6.0\WebApp.Domain.pdb
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\obj\Debug\net6.0\WebApp.Domain.csproj.AssemblyReference.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\obj\Debug\net6.0\WebApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\obj\Debug\net6.0\WebApp.Domain.AssemblyInfoInputs.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\obj\Debug\net6.0\WebApp.Domain.AssemblyInfo.cs
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\obj\Debug\net6.0\WebApp.Domain.csproj.CoreCompileInputs.cache
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\obj\Debug\net6.0\WebApp.Domain.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\obj\Debug\net6.0\refint\WebApp.Domain.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\obj\Debug\net6.0\WebApp.Domain.pdb
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebApp.Domain\obj\Debug\net6.0\ref\WebApp.Domain.dll

@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 // import {ProSidebarProvider} from "react-pro-sidebar";
 // import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from '@mui/material/styles';
-import { GlobalStyles } from "./Acceuil/GlobalStyles"
+import { GlobalStyles } from "./Composant/GlobalStyles"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <ThemeProvider theme={GlobalStyles}>

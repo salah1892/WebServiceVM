@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="WPFSignalRClient.View.PayementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFSignalRClient.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1200">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="750"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="IdPayement"  Height="50"/>
+        <TextBox  Grid.Row="1" Grid.Column="2" Width="200" Height="30" Text="{Binding IdPayement}"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="DatePayement"  Height="50"/>
+        <TextBox  Grid.Row="2" Grid.Column="2" Width="200" Height="30" Text="{Binding DatePayement}"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Montant"  Height="50"/>
+        <TextBox  Grid.Row="3" Grid.Column="2" Width="200" Height="30" Text="{Binding Montant}"/>
+
+
+
+        <Button Grid.Row="1" Grid.Column="3"
+                    Content="Envoyer" 
+                    Height="50"
+                    Width="95"
+                    Command="{Binding SendToServeur}" />
+        <Button Grid.Row="1" Grid.Column="4" IsEnabled="true"
+                    Content="change View" 
+                    Height="50"
+                    Width="95" 
+                    Command="{Binding SendToOther}" />
+        <ListView Grid.Row="2" Grid.Column="4" Height="100" Width="750"
+                  Margin="0 20 0 0"
+                BorderThickness="0"
+                ItemsSource="{Binding Messages}"
+                ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  
+                  >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Montant"  DisplayMemberBinding="{Binding number}"/>
+                    <GridViewColumn Header="Date Payement"  DisplayMemberBinding="{Binding datePayement}"/>
+                    <GridViewColumn Header="IDPayement"  DisplayMemberBinding="{Binding idPayement}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Grid>
+</UserControl>

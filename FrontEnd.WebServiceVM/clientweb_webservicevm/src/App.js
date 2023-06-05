@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from "react";
 import {Routes, Route, BrowserRouter} from "react-router-dom";
-import Acceuil from './Acceuil/Acceuil';
+import Acceuil from './Composant/Acceuil';
 import Register from './LoginPages/Register';
 import Login from './LoginPages/Login';
 import ForgotPassword from './LoginPages/ForgotPassword';
