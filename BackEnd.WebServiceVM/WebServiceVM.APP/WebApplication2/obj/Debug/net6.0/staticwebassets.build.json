@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "b1mWX6+bt/u1KlQWUIKtoOpbq6zU7qCxk7LR53mklEQ=",
-  "Source": "WebApplication2",
-  "BasePath": "_content/WebApplication2",
+  "Hash": "u8mKcont/5C/GgRTfXZo8q1b53qH8m0haAn1GbP3kvg=",
+  "Source": "WebVM.WebAPI",
+  "BasePath": "_content/WebVM.WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using WebServiceVM.Infrastructure.Persistence;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,12 +9,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //ADD ContactsAPIDbContext to the dependency injection Services
-//builder.Services.AddDbContext<VMDbContext>(
-//    options => options.UseMySQL(
-//        builder.Configuration.GetConnectionString("WebServiceVMConnectionStrings")));
-builder.Services.AddDbContext<VMDbContext>(
-    options => options.UseSqlServer(
-        builder.Configuration.GetConnectionString("WebServiceVMConnectionStrings")));
+builder.Services.AddDbContext<VMDbContext>(options =>
+{
+    var ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    options.UseMySql(ConnectionString, ServerVersion.AutoDetect(ConnectionString));
+});
+
+//options => options.UseSqlServer(
+//builder.Configuration.GetConnectionString("WebServiceVMConnectionStrings")));
 //builder.Services.AddDbContext<VMDbContext>();
 //-------Service Cors Policy-----------------------------------------------------------//
 builder.Services.AddCors(options =>

@@ -14,6 +14,7 @@ namespace WebServiceVM.Infrastructure.Persistence
         public DbSet<TariffTicket> TariffTicket { get; set; }
         public DbSet<Ticket> Ticket { get; set; }
         public DbSet<WebClient> WebClient { get; set; }
+        public DbSet<Parametre> Parametre { get; set; }
         public VMDbContext()
         {
         }
@@ -32,6 +33,7 @@ namespace WebServiceVM.Infrastructure.Persistence
             new TariffTicketEntityTypeConfiguration().Configure(modelBuilder.Entity<TariffTicket>());
             new TicketEntityTypeConfiguration().Configure(modelBuilder.Entity<Ticket>());
             new WebClientEntityTypeConfiguration().Configure(modelBuilder.Entity<WebClient>());
+            new ParametreEntityTypeConfiguration().Configure(modelBuilder.Entity<Parametre>());
 
         }
     }

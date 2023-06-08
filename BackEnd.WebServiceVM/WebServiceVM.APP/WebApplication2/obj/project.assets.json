@@ -929,9 +929,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PFE\\WorkSpace_Code\\VendorMachine_Onion\\WebServiceVM\\BackEnd.WebServiceVM\\WebServiceVM.APP\\WebApplication2\\WebApplication2.csproj",
-      "projectName": "WebApplication2",
-      "projectPath": "D:\\PFE\\WorkSpace_Code\\VendorMachine_Onion\\WebServiceVM\\BackEnd.WebServiceVM\\WebServiceVM.APP\\WebApplication2\\WebApplication2.csproj",
+      "projectUniqueName": "D:\\PFE\\WorkSpace_Code\\VendorMachine_Onion\\WebServiceVM\\BackEnd.WebServiceVM\\WebServiceVM.APP\\WebApplication2\\WebVM.WebAPI.csproj",
+      "projectName": "WebVM.WebAPI",
+      "projectPath": "D:\\PFE\\WorkSpace_Code\\VendorMachine_Onion\\WebServiceVM\\BackEnd.WebServiceVM\\WebServiceVM.APP\\WebApplication2\\WebVM.WebAPI.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
       "outputPath": "D:\\PFE\\WorkSpace_Code\\VendorMachine_Onion\\WebServiceVM\\BackEnd.WebServiceVM\\WebServiceVM.APP\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",

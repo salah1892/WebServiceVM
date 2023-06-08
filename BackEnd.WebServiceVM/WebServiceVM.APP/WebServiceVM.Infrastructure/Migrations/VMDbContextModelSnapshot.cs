@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebServiceVM.Infrastructure.Persistence;
 
@@ -18,17 +17,15 @@ namespace WebServiceVM.Infrastructure.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.0")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("ParkingTariffAbonnement", b =>
                 {
                     b.Property<Guid>("ListParkingsIdParking")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("ListTariffAbonnementIdTariffAbonnement")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.HasKey("ListParkingsIdParking", "ListTariffAbonnementIdTariffAbonnement");
 
@@ -41,18 +38,18 @@ namespace WebServiceVM.Infrastructure.Migrations
                 {
                     b.Property<Guid>("IdAbonnee")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Nom")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("NumCarte")
                         .HasColumnType("int");
 
                     b.Property<string>("Prenom")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("IdAbonnee");
 
@@ -63,22 +60,22 @@ namespace WebServiceVM.Infrastructure.Migrations
                 {
                     b.Property<Guid>("IdAbonnement")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("AbonneeIdAbonnee")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateActivation")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DateCreation")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DateDesActivation")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<Guid>("TariffAbonnementIdTariffAbonnement")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.HasKey("IdAbonnement");
 
@@ -89,23 +86,40 @@ namespace WebServiceVM.Infrastructure.Migrations
                     b.ToTable("Abonnement");
                 });
 
+            modelBuilder.Entity("WebServiceVM.Core.Entity.Parametre", b =>
+                {
+                    b.Property<Guid>("IdParametre")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("DescriptionPayement")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("TypePayement")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdParametre");
+
+                    b.ToTable("Parametre");
+                });
+
             modelBuilder.Entity("WebServiceVM.Core.Entity.Parking", b =>
                 {
                     b.Property<Guid>("IdParking")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("AdressParking")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("NomParking")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("TypeParking")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("IdParking");
 
@@ -116,16 +130,16 @@ namespace WebServiceVM.Infrastructure.Migrations
                 {
                     b.Property<Guid>("IdPayement")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("AbonnementIdAbonnement")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DatePayement")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<Guid>("TicketIdTicket")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.HasKey("IdPayement");
 
@@ -140,17 +154,16 @@ namespace WebServiceVM.Infrastructure.Migrations
                 {
                     b.Property<Guid>("IdTariffAbonnement")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
-                    b.Property<DateTime>("DateDebut")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("DateDebut")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<DateTime>("DateFin")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("DateFin")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("TypeAbonnement")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("IdTariffAbonnement");
 
@@ -161,13 +174,13 @@ namespace WebServiceVM.Infrastructure.Migrations
                 {
                     b.Property<Guid>("IdTariffTicket")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateEntree")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DateSortie")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("IdTariffTicket");
 
@@ -178,22 +191,22 @@ namespace WebServiceVM.Infrastructure.Migrations
                 {
                     b.Property<Guid>("IdTicket")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateEntree")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("DateSortie")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<float>("PrixTicket")
-                        .HasColumnType("real");
+                        .HasColumnType("float");
 
                     b.Property<bool>("Statut")
-                        .HasColumnType("bit");
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<Guid>("TariffTicketIdTariffTicket")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.HasKey("IdTicket");
 
@@ -206,25 +219,25 @@ namespace WebServiceVM.Infrastructure.Migrations
                 {
                     b.Property<Guid>("IdWebClient")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Genre")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("Mobile")
                         .HasColumnType("int");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("IdWebClient");
 

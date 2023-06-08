@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "wzdQGUPskpP3b3ERRpaqaWYx4Uv0cTFVUAt/X3O/CoM=",
-  "Source": "VendorMachine.WebService",
-  "BasePath": "_content/VendorMachine.WebService",
+  "Hash": "9p/5eJDBLgZEd4BbIOpPyRfdpd2cYDhWIMhbRhL6/JU=",
+  "Source": "VM.WebService",
+  "BasePath": "_content/VM.WebService",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

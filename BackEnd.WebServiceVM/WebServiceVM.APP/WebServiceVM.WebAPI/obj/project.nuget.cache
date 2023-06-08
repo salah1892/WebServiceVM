@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pFM/8EYRki+xsXID0bVKwqy3mkGqet5WpqGACMhEk1M3oWHW5Lou+KJvASqu+YA7Ogd0fO56dSR9Q/EDgP3p9A==",
+  "dgSpecHash": "fdYrOW0yct6ETm0UGdkdlfIZ6pqCzP5H+axx/Qja/qBbn/qsaPWJl0yFBQLdlWY794n+Jv5xr4+ov83gEeMRVg==",
   "success": true,
   "projectFilePath": "D:\\PFE\\WorkSpace_Code\\VendorMachine_Onion\\WebServiceVM\\BackEnd.WebServiceVM\\WebServiceVM.APP\\WebServiceVM.WebAPI\\WebServiceVM.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -50,9 +50,11 @@
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mysql.data\\8.0.28\\mysql.data.8.0.28.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mysql.entityframeworkcore\\6.0.0\\mysql.entityframeworkcore.6.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\mysqlconnector\\2.0.0\\mysqlconnector.2.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\6.0.0\\pomelo.entityframeworkcore.mysql.6.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

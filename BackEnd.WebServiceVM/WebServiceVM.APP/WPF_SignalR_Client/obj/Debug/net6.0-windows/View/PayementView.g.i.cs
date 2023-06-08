@@ -53,7 +53,7 @@ namespace WPFSignalRClient.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFSignalRClient;component/view/payementview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFSignalRClient;V1.0.0.0;component/view/payementview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\PayementView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "83Vso48gpgsJJETB67xkqAKyUNc/2eL7GmHCkDUrZku9YIBjzLM+NJQoApxDg922h7QCax50fsqKYjOthgxFCw==",
+  "dgSpecHash": "IFTNAP4HO91Xwr9Tv5ptjj361Tg56UMWsc3Em+6SNePi/9O+C/qQMUTULDCZFS4fnbaEegoUO3OPqSeZIv8o6w==",
   "success": true,
-  "projectFilePath": "D:\\PFE\\WorkSpace_Code\\VendorMachine_Onion\\WebServiceVM\\BackEnd.WebServiceVM\\WebServiceVM.APP\\WebApplication2\\WebApplication2.csproj",
+  "projectFilePath": "D:\\PFE\\WorkSpace_Code\\VendorMachine_Onion\\WebServiceVM\\BackEnd.WebServiceVM\\WebServiceVM.APP\\WebApplication2\\WebVM.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.5\\microsoft.aspnetcore.connections.abstractions.7.0.5.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\7.0.5\\microsoft.aspnetcore.http.connections.client.7.0.5.nupkg.sha512",

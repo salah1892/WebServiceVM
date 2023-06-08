@@ -84,3 +84,5 @@ D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebS
 D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.WebAPI\bin\Debug\net6.0\System.Web.Http.Cors.dll
 D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.WebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.WebAPI\bin\Debug\net6.0\MySqlConnector.dll
+D:\PFE\WorkSpace_Code\VendorMachine_Onion\WebServiceVM\BackEnd.WebServiceVM\WebServiceVM.APP\WebServiceVM.WebAPI\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
