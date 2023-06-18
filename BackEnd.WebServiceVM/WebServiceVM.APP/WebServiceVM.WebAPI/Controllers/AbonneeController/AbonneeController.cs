@@ -48,7 +48,7 @@ namespace WebServiceVM.WebAPI.Controllers.AbonneeController
         }
         [HttpPut]
         [Route("AbonneeController/{id:guid}")]
-        public async Task<IActionResult> UpdateWebClient([FromRoute] Guid id, UpdateAbonneeRequest updateAbonneeRequest)
+        public async Task<IActionResult> UpdateAbonnee([FromRoute] Guid id, UpdateAbonneeRequest updateAbonneeRequest)
         {
             var abonnee = await dbContext.Abonnee.FindAsync(id);
             if (abonnee != null)

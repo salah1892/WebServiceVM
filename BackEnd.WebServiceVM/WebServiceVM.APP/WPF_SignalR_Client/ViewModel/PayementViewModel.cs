@@ -20,7 +20,7 @@ namespace WPFSignalRClient.ViewModel
     public class PayementViewModel : ViewModelBase
     {
         public readonly ISignalRPayementService _signalRPayementService;
-        public readonly HubConnection hubConnection ;
+        public readonly HubConnection hubConnection;
         //public readonly HubCon hubCon;
         private INavigationService _navigation;
 
@@ -61,7 +61,7 @@ namespace WPFSignalRClient.ViewModel
         {
             Messages = new ObservableCollection<MsgPayementViewModel>();
             //hubConnection = hub;
-           // _signalRPayementService =  new SignalRPayementService(hub);
+            // _signalRPayementService =  new SignalRPayementService(hub);
             _navigation = navigationService;
             SendToServeur = new RelayCommand(async o =>
             {
@@ -71,7 +71,8 @@ namespace WPFSignalRClient.ViewModel
                  .SendPayementMsg(
                      new Payement(IdPayement, DatePayement, Montant));
             }, o => true);
-            SendToOther = new RelayCommand(o => { Navigation.NavigateTo<OtherViewModel>(); }, o => true);
+            //SendToOther = new RelayCommand(o => { Navigation.NavigateTo<OtherViewModel>(); }, o => true);
+            //SendToOther = new RelayCommand(o => { var hub=newPa }, o => true);
             signalRPayementService.PayementMsgReceived += SignalRPayementService_PayementMsgReceived;
         }
         ISignalRPayementService signalRPayementService { get; }
@@ -85,6 +86,6 @@ namespace WPFSignalRClient.ViewModel
             });
 
         }
-        
+
     }
 }

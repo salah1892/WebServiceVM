@@ -1,19 +1,42 @@
 import { Toolbar, Typography } from "@mui/material";
+import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import useStyles from './styles';
 const Footer = () => {
     const StylesClasses = useStyles();
     return (
-        // className = { StylesClasses.footer }
-        <Toolbar style={{ flexDirection:'column', direction: 'flex', position: 'static', backgroundColor:'#F1836B' ,height:'10vh' ,color:'white'}}>
-            {/* <div style={{ direction: 'flex', align:"center" ,width:}}> */}
-                <Typography variant='h6' align="center" gutterBottom style={{ align:'center'}}>
-                Footer
-            </Typography>
-            <Typography variant='subtitle1' align="center" color="textSecondary">
-                Something here to give the footer a purpose!
-            </Typography>
-            {/* </div> */}
-            {/* <ul>
+      // className = { StylesClasses.footer }
+      <Toolbar
+        style={{
+          flexDirection: "column",
+          direction: "flex",
+          position: "static",
+          backgroundColor: "#F1836B",
+          height: "10vh",
+          color: "white",
+          borderStyle: "groove",
+        }}
+      >
+        {/* <div style={{ direction: 'flex', align:"center" ,width:}}> */}
+        <Typography
+          variant="h6"
+          align="center"
+          gutterBottom
+          style={{ align: "center", color: "#0D0B0A" }}
+        >
+          Seca Serrure
+        </Typography>
+        {/* <AccountCircleRoundedIcon /> */}
+        <Typography
+          //   icon={<AccountCircleRoundedIcon />}
+          variant="subtitle1"
+          align="center"
+          color="textSecondary"
+        >
+          36 bis route de Tunis - 4011 Hammam Sousse - TUNISIE , CP : 4011
+          HAMMAM SOUSSE - Sousse
+        </Typography>
+        {/* </div> */}
+        {/* <ul>
                 <li>
                     <a href="https://github.com/Ahmed-Abdul-Aziz/" target="_blank" rel="noreferrer">
                         github
@@ -25,7 +48,7 @@ const Footer = () => {
                     </a>
                 </li>
             </ul> */}
-        </Toolbar>
+      </Toolbar>
     );
 };
 export default Footer;

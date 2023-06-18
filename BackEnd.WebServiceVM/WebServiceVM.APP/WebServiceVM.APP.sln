@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServiceVM.WebAPI", "WebS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServiceVM.Infrastructure", "WebServiceVM.Infrastructure\WebServiceVM.Infrastructure.csproj", "{6700C047-1C70-43CB-B783-E73AECCF7716}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebVM.WebAPI", "WebApplication2\WebVM.WebAPI.csproj", "{83500A72-6E9E-4186-8FF8-28CCA5A7C6A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebVM.WebAPI", "WebVM.WebAPI\WebVM.WebAPI.csproj", "{83500A72-6E9E-4186-8FF8-28CCA5A7C6A7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFSignalRClient", "WPF_SignalR_Client\WPFSignalRClient.csproj", "{1FDA39A8-7A36-447F-8EE5-CA4B261B9AF6}"
 EndProject

@@ -41,7 +41,7 @@
                     Width="95"
                     Command="{Binding SendToServeur}" />
         <Button Grid.Row="1" Grid.Column="4" IsEnabled="true"
-                    Content="change View" 
+                    Content="Send ToOther WebApi" 
                     Height="50"
                     Width="95" 
                     Command="{Binding SendToOther}" />

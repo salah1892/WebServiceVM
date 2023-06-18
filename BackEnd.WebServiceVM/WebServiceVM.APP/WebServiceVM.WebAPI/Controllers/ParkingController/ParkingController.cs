@@ -12,14 +12,14 @@ namespace WebServiceVM.WebAPI.Controllers.ParkingController
 
         [HttpGet]
         [Route("ParkingController")]
-        public async Task<IActionResult> GetWebParkings()
+        public async Task<IActionResult> GetParkings()
         {
             return Ok(await dbContext.Parking.ToArrayAsync());
         }
 
         [HttpGet]
         [Route("ParkingController/{id:guid}")]
-        public async Task<IActionResult> GetWebParking([FromRoute] Guid id)
+        public async Task<IActionResult> GetParking([FromRoute] Guid id)
         {
             var parking = await dbContext.Parking.FindAsync(id);
             if (parking == null)
@@ -31,7 +31,7 @@ namespace WebServiceVM.WebAPI.Controllers.ParkingController
 
         [HttpPost]
         [Route("ParkingController")]
-        public async Task<IActionResult> AddTicket(AddParkingRequest addParkingRequest)
+        public async Task<IActionResult> AddParking(AddParkingRequest addParkingRequest)
         {
             var parking = new Parking()
             {

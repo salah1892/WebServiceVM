@@ -6,16 +6,17 @@ import Abonnee from "./Abonnee";
 import Abonnement from "./Abonnement";
 import Passager from "./Passager";
 import Payement from "./Payement";
+import ParametresPayement from "./Parametre/ParametresPayement"
 // import { GlobalStyles } from "./Composant/GlobalStyles"
-const Home = () => {
-    return (
-        <>
-            <h1 className="header">From Home</h1>
-            <h3>From Home</h3>
-            <p>From Home.........</p>
-        </>
-    );
-};
+// const Home = () => {
+//     return (
+//         <>
+//             <h1 className="header">From Home</h1>
+//             <h3>From Home</h3>
+//             <p>From Home.........</p>
+//         </>
+//     );
+// };
 // const Payement = () => {
 //     return (
 //         <>
@@ -30,9 +31,10 @@ function MainSection({currentSection}) {
 
     let sectionContent = null;
 
-    if (currentSection === 'Home') {
-        sectionContent = <Home/>;
-    } else if (currentSection === 'Dashboard') {
+    // if (currentSection === 'Home') {
+    //     sectionContent = <Home/>;
+    // } else if (currentSection === 'Dashboard') {
+      if (currentSection === 'Dashboard') {
         sectionContent = <Dashboard/>;
     } else if (currentSection === 'Payement') {
         sectionContent = <Payement/>;
@@ -44,6 +46,8 @@ function MainSection({currentSection}) {
         sectionContent = <Abonnement/>;
     }else if (currentSection === 'Passager') {
         sectionContent = <Passager/>;
+    }else if (currentSection === "ParametresPayement") {
+      sectionContent = <ParametresPayement />;
     }
     // style={{flexGrow: 1,
     //     width: 1000,
@@ -52,9 +56,9 @@ function MainSection({currentSection}) {
     return (
         <div className='MainSection' style={{
             flexGrow: 1,
-            width: 1000,
+            width: 1100,
             height: '100vh',
-            overflow: 'auto'
+            overflow: 'auto',
         }}>
             {sectionContent}
         </div>

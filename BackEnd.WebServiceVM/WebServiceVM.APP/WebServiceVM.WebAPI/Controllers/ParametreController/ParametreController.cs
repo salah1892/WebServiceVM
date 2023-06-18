@@ -30,7 +30,7 @@ namespace WebServiceVM.WebAPI.Controllers.ParametreController
         }
         [HttpPost]
         [Route("ParametreController")]
-        public async Task<IActionResult> AddWebClient(AddParametreRequest addParametreRequest)
+        public async Task<IActionResult> AddParametre(AddParametreRequest addParametreRequest)
         {
             var parametre = new Parametre()
             {

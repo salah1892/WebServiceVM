@@ -43,7 +43,7 @@ const Abonnement = () => {
     }
     useEffect(() => {
         getAllAbonnement();
-    }, []);
+    }, [abonnements]);
     //------------------------------------------------------------------------------//
     return (
         <div>

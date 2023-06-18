@@ -52,7 +52,9 @@ namespace WPFSignalRClient
             /*This Work Finally*/
             services.TryAddSingleton<HubConnection>(provider => {
                 var connection = new HubConnectionBuilder()
-                    .WithUrl("http://localhost:5187/PayementOperation")
+                    //.WithUrl("http://localhost:5187/PayementOperation")//WebVM.WebAPI
+                    .WithUrl("https://localhost:7061/PayementOperation")//WebVM.WebAPI
+                    //.WithUrl("http://localhost:5153/PayementOperation")//WebServiceVM.WebAPI
                     .Build();
                 connection.StartAsync().GetAwaiter().GetResult();
                 return connection;
